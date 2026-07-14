@@ -1,0 +1,70 @@
+# HN thread 37281692 – WTFPython
+
+## id 37281692 – Tomte
+
+## id 37283246 – 8589934591
+
+Wow. Can't believe a couple of these are in my production. Esp with the mixture of py2 and py3. And people who are not well versed in python are just not aware of these gotchas.<p>Good repo, I learnt quite a few more... wtfs. :)<p>I have a strong belief that unless type hints, testing, tooling is leveraged properly, python does not qualify as a good candidate for long term projects. Go handles all of this automatically and I'm having good results with it as an alternative to Python for small to medium scale projects.
+
+## id 37286068 – jackblemming
+
+Consider not holding strong beliefs without empirical evidence. There are both plenty of long term python projects that have held up, and no strong evidence one way or the other on type safety.
+
+## id 37291631 – globular-toast
+
+The only evidence I've seen in this respect suggests typing is not the leading cause of bugs in Python. I wish I could find the talk but essentially the guy looked at a load of GitHub issues and analysed the cause and only like 1% or so were type related.<p>I like putting in types just to help my IDE with autocomplete, though. I have also caught a few errors with mypy that could have caused a crash in very unlikely cases. I'm not convinced it's worth rigourously typing a project. It seems like mostly a nerd snipe because I've noticed there is a satisfaction with getting in right despite not making any difference to the user.
+
+## id 37286187 – 8589934591
+
+There are both merits and demerits to python. Unfortunately not everyone has the opportunity or the luxury to work with projects that are properly maintained. Even messy python projects in legacy companies hold up but that does not mean quality and maintenance costs are good. My beliefs stem from my experience with the jobs available in my area and country. I'm not the expert on type safety but my understanding from various sources and my own experience is that type safety is superior. Go has been the best candidate as the alternative for the projects I have undertaken. YMMV.
+
+## id 37286328 – oivey
+
+For most of these type hints or static typing do not at all help. I haven’t went through all of them, but in the first quarter or so almost all of them were due to leaky compiler weirdness in CPython.
+
+## id 37288652 – 8589934591
+
+I haven't tested out the repo with type hints so I can't comment on that. What I did mean to say was outside of this repo, type hints are a huge boon saver. There are enough legacy projects written by non python experts which would benefit from whatever I said above.
+
+## id 37284321 – synergy20
+
+I agree, there should be a book specifically made for python-wtfs, e.g. corner cases, practical hacks, name it as 'python traps and pitfalls'
+
+## id 37287009 – kristianp
+
+One python library WTF I came across recently is the autojunk parameter of the difflib  SequenceMatcher class.  Despite passing constructing the class with<p><pre><code>    difflib.SequenceMatcher(isjunk=None, ...
+</code></pre>
+The matcher will start classifying characters as junk once the b parameter is more than 200 characters long.  So unless you read the docs carefully, your matcher will start not matching anything longer than a few characters once the input gets longer than a few sentences.  The trick is to also set autojunk=False in the constructor.<p>Its like the original writer of this component wrote the matcher for a specific application (DNA matching?) and left in the heuristic even though it isn't applicable to general use.  At some point they added the autojunk parameter to gate this behaviour, but it still defaults to true, to keep backwards compat, and to confuse people.<p><a href="https://docs.python.org/3/library/difflib.html#difflib.SequenceMatcher" rel="nofollow noreferrer">https://docs.python.org/3/library/difflib.html#difflib.Seque...</a>
+
+## id 37288087 – cutler
+
+Honestly, I never understood why Python gained such a good reputation given the scale of its warts and don't get me started on its crippled lambda implementation.
+
+## id 37291639 – globular-toast
+
+Use it for a while and you'll understand why. It's a joy to use. That is successful despite its warts just goes to show how nice it is compared to other languages.
+
+## id 37282076 – Pannoniae
+
+I would find this funny, if not each and every one of these represents a potential bug in software. Some are really esoteric (like the name mangling example) but many are something you might do accidentally.<p>Sadly, there are no easy paths to fix this because compatibility (<a href="https://xkcd.com/1172/" rel="nofollow noreferrer">https://xkcd.com/1172/</a>), but for greenfield projects which aren't expected to be small throwaway projects, using Python is not necessarily a very good idea.
+
+## id 37282328 – stevesimmons
+
+It's a huge leap to conclude "for greenfield projects ... using Python is not necessarily a very good idea".
+
+## id 37283306 – jokoon
+
+I still have the feeling that those oddities are still a bit less bad than the ones of js.<p>I am a still disappointed by python because I am so addicted to all the fun things of python, yet python is inadequate for game development.<p>I use godot, which has a python-flavor language, but it's missing A LOT of what I love about python: list comprehension, tuple, set, and many others. And now that I think about it, it's going to be difficult for them to evolve the language, although I often prefer to break codebases.
+
+## id 37283248 – moralestapia
+
+Lol.<p>Funny how when JS is involved the frame is "WTF, this is why JS is a shit language and no one should use it".<p>Whereas with python is "WTF, Python is great and I don't understand it well enough".
+
+## id 37283473 – thrdbndndn
+
+To me, it's about how often you encounter these quirks when use the language "intuitively" (very subjective, I know).<p>I encountered dozens of "JS WTF" when learning without actively trying weird things. It's ultimately on me for not understanding the language better, no argument here, but it feels unintuitive.<p>And for Python, while I agree with most of cases listed in the repo to be indeed WTF (and a very good resource to learn it deeper!), I don't really encounter most of them naturally, other than the implicit string literal concatenation and default mutable arguments.
+
+## id 37283567 – moralestapia
+
+I disagree and think is the other way around.<p>The TFA shows several examples of code that someone learning the language would definitely hit. Most of the time JS "quirks" are due to code that is so complicated that the actual WTF is on why would someone design such code in the first place.
+

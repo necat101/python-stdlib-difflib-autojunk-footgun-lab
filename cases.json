@@ -1,0 +1,248 @@
+[
+  {
+    "id": "python_version_marker",
+    "desc": "python version marker",
+    "expect": {
+      "inspect_api": "pass",
+      "evaluate_ratio": "not_applicable",
+      "inspect_junk_state": "not_applicable",
+      "inspect_match_structure": "not_applicable",
+      "ml_context_observation": "not_applicable"
+    }
+  },
+  {
+    "id": "sequence_matcher_api_marker",
+    "desc": "SequenceMatcher api marker",
+    "expect": {
+      "inspect_api": "pass",
+      "evaluate_ratio": "not_applicable",
+      "inspect_junk_state": "not_applicable",
+      "inspect_match_structure": "not_applicable",
+      "ml_context_observation": "not_applicable"
+    }
+  },
+  {
+    "id": "autojunk_parameter_marker",
+    "desc": "autojunk parameter marker",
+    "expect": {
+      "inspect_api": "pass",
+      "evaluate_ratio": "not_applicable",
+      "inspect_junk_state": "not_applicable",
+      "inspect_match_structure": "not_applicable",
+      "ml_context_observation": "not_applicable"
+    }
+  },
+  {
+    "id": "identical_short_sequence_marker",
+    "desc": "identical short sequence",
+    "seq": [
+      "a",
+      "b",
+      "c",
+      "d"
+    ],
+    "expect": {
+      "inspect_api": "not_applicable",
+      "evaluate_ratio": "pass",
+      "inspect_junk_state": "not_applicable",
+      "inspect_match_structure": "pass",
+      "ml_context_observation": "not_applicable"
+    }
+  },
+  {
+    "id": "empty_sequence_identity_marker",
+    "desc": "empty sequence identity",
+    "expect": {
+      "inspect_api": "not_applicable",
+      "evaluate_ratio": "pass",
+      "inspect_junk_state": "not_applicable",
+      "inspect_match_structure": "pass",
+      "ml_context_observation": "not_applicable"
+    }
+  },
+  {
+    "id": "documented_order_sensitivity_marker",
+    "desc": "order sensitivity",
+    "a": "tide",
+    "b": "diet",
+    "expect": {
+      "inspect_api": "not_applicable",
+      "evaluate_ratio": "local_observation",
+      "inspect_junk_state": "not_applicable",
+      "inspect_match_structure": "pass",
+      "ml_context_observation": "not_applicable"
+    }
+  },
+  {
+    "id": "autojunk_length_199_boundary_marker",
+    "desc": "199 boundary",
+    "expect": {
+      "inspect_api": "not_applicable",
+      "evaluate_ratio": "pass",
+      "inspect_junk_state": "pass",
+      "inspect_match_structure": "not_applicable",
+      "ml_context_observation": "not_applicable"
+    }
+  },
+  {
+    "id": "autojunk_length_200_boundary_marker",
+    "desc": "200 boundary",
+    "expect": {
+      "inspect_api": "not_applicable",
+      "evaluate_ratio": "pass",
+      "inspect_junk_state": "pass",
+      "inspect_match_structure": "not_applicable",
+      "ml_context_observation": "not_applicable"
+    }
+  },
+  {
+    "id": "popular_token_strict_threshold_marker",
+    "desc": "popular token strict threshold",
+    "expect": {
+      "inspect_api": "not_applicable",
+      "evaluate_ratio": "pass",
+      "inspect_junk_state": "pass",
+      "inspect_match_structure": "not_applicable",
+      "ml_context_observation": "not_applicable"
+    }
+  },
+  {
+    "id": "autojunk_true_false_long_repetition_marker",
+    "desc": "autojunk true false long repetition",
+    "expect": {
+      "inspect_api": "not_applicable",
+      "evaluate_ratio": "pass",
+      "inspect_junk_state": "pass",
+      "inspect_match_structure": "not_applicable",
+      "ml_context_observation": "not_applicable"
+    }
+  },
+  {
+    "id": "second_sequence_popularity_direction_marker",
+    "desc": "second sequence popularity direction",
+    "expect": {
+      "inspect_api": "not_applicable",
+      "evaluate_ratio": "local_observation",
+      "inspect_junk_state": "pass",
+      "inspect_match_structure": "not_applicable",
+      "ml_context_observation": "not_applicable"
+    }
+  },
+  {
+    "id": "custom_isjunk_state_marker",
+    "desc": "custom isjunk state",
+    "expect": {
+      "inspect_api": "not_applicable",
+      "evaluate_ratio": "not_applicable",
+      "inspect_junk_state": "pass",
+      "inspect_match_structure": "not_applicable",
+      "ml_context_observation": "not_applicable"
+    }
+  },
+  {
+    "id": "matching_blocks_terminal_dummy_marker",
+    "desc": "matching blocks terminal dummy",
+    "expect": {
+      "inspect_api": "not_applicable",
+      "evaluate_ratio": "not_applicable",
+      "inspect_junk_state": "not_applicable",
+      "inspect_match_structure": "pass",
+      "ml_context_observation": "not_applicable"
+    }
+  },
+  {
+    "id": "opcodes_reconstruction_marker",
+    "desc": "opcodes reconstruction",
+    "a": "qabxcd",
+    "b": "abycdf",
+    "expect": {
+      "inspect_api": "not_applicable",
+      "evaluate_ratio": "not_applicable",
+      "inspect_junk_state": "not_applicable",
+      "inspect_match_structure": "pass",
+      "ml_context_observation": "not_applicable"
+    }
+  },
+  {
+    "id": "quick_ratio_upper_bound_marker",
+    "desc": "quick ratio upper bound",
+    "a": "abcd",
+    "b": "bcde",
+    "expect": {
+      "inspect_api": "not_applicable",
+      "evaluate_ratio": "pass",
+      "inspect_junk_state": "not_applicable",
+      "inspect_match_structure": "not_applicable",
+      "ml_context_observation": "not_applicable"
+    }
+  },
+  {
+    "id": "set_seq2_reuse_equivalence_marker",
+    "desc": "set_seq2 reuse equivalence",
+    "expect": {
+      "inspect_api": "not_applicable",
+      "evaluate_ratio": "pass",
+      "inspect_junk_state": "not_applicable",
+      "inspect_match_structure": "not_applicable",
+      "ml_context_observation": "not_applicable"
+    }
+  },
+  {
+    "id": "get_close_matches_cutoff_marker",
+    "desc": "get_close_matches cutoff",
+    "word": "appel",
+    "possibilities": [
+      "ape",
+      "apple",
+      "peach",
+      "puppy"
+    ],
+    "expect": {
+      "inspect_api": "not_applicable",
+      "evaluate_ratio": "local_observation",
+      "inspect_junk_state": "not_applicable",
+      "inspect_match_structure": "not_applicable",
+      "ml_context_observation": "local_observation"
+    }
+  },
+  {
+    "id": "tiny_record_linkage_threshold_marker",
+    "desc": "tiny record linkage threshold",
+    "query": "acme corporation",
+    "candidates": [
+      "acme corporation",
+      "acme corp",
+      "acne corporation",
+      "northwind logistics"
+    ],
+    "expect": {
+      "inspect_api": "not_applicable",
+      "evaluate_ratio": "local_observation",
+      "inspect_junk_state": "not_applicable",
+      "inspect_match_structure": "not_applicable",
+      "ml_context_observation": "local_observation"
+    }
+  },
+  {
+    "id": "autojunk_candidate_ranking_flip_marker",
+    "desc": "autojunk candidate ranking flip",
+    "expect": {
+      "inspect_api": "not_applicable",
+      "evaluate_ratio": "local_observation",
+      "inspect_junk_state": "not_applicable",
+      "inspect_match_structure": "not_applicable",
+      "ml_context_observation": "local_observation"
+    }
+  },
+  {
+    "id": "no_global_similarity_or_ml_validity_claim_marker",
+    "desc": "no global similarity or ml validity claim",
+    "expect": {
+      "inspect_api": "not_applicable",
+      "evaluate_ratio": "not_applicable",
+      "inspect_junk_state": "not_applicable",
+      "inspect_match_structure": "not_applicable",
+      "ml_context_observation": "context_only"
+    }
+  }
+]
